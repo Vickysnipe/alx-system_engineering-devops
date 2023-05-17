@@ -6,6 +6,6 @@ FILE="/etc/nginx/sites-available/default"
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo echo "$STRING" > /var/www/html/index.nginx-debian.html
+echo "$STRING" > /var/www/html/index.nginx-debian.html
 sed -i "37i\ $REDIRECT" "$FILE"
 sudo service nginx restart
